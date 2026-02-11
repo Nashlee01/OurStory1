@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Our Story - The Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💕 Our Story 💕</h1>
+            <p class="subtitle">An Interactive Love Story</p>
+        </header>
+
+        <main>
+            <div id="progressBar" class="progress-bar">
+                <span id="progressText">Chapter 1 • Scene 1/8</span>
+            </div>
+
+            <div id="storyContainer" class="story-container">
+                <div id="sceneText" class="scene-text">
+                    <!-- Scene text will be inserted here -->
+                </div>
+
+                <div id="sceneImage" class="scene-image" style="display: none;">
+                    <img id="sceneImg" src="" alt="Our Memory">
+                </div>
+
+                <div id="resultText" class="result-text" style="display: none;">
+                    <!-- Result text will be shown here after choice -->
+                </div>
+
+                <div id="choicesSection" class="choices">
+                    <!-- Choice buttons will be inserted here -->
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="backBtn" class="control-btn" style="display: none;">← Back</button>
+                <button id="restartBtn" class="control-btn">↺ Restart</button>
+            </div>
+
+            <section id="memoriesSection" class="memories-section">
+                <h2>💭 Memories Unlocked</h2>
+                <div id="memoriesGrid" class="memories-grid">
+                    <p class="no-memories">No memories unlocked yet...</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made with 💕 by CJ for Nycie</p>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

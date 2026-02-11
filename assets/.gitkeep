@@ -1,0 +1,9 @@
+# Place your us.jpg photo here
+
+This folder is for the image that will appear in the rooftop scene.
+
+The game is looking for: `assets/us.jpg`
+
+You can:
+1. Add a photo named `us.jpg` to this folder
+2. Or change the `photoURL` in game.js to point to a different image location
