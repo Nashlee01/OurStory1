@@ -1,4 +1,4 @@
-// ==================== 
+﻿// ==================== 
 // Game Configuration & Story Content
 // ==================== 
 
@@ -10,7 +10,7 @@ const CUSTOMIZATION = {
     meetingPlace: "Tantan",
     firstConversationContext: "King's Day in the Netherlands",
     insideJoke: "umiikot ung mundo ko",
-    favoriteSong: "Too Good to Say Goodbye — Bruno Mars",
+    favoriteSong: "Too Good to Say Goodbye ” Bruno Mars",
     photoURL: "assets/us.jpg"
 };
 
@@ -19,298 +19,416 @@ const STORY_DATA = {
     chapters: [
         {
             id: "chapter1",
-            title: "Chapter 1: How We Met",
+            title: "Chapter 1: Our Story",
             scenes: [
                 {
-                    id: "scene1",
-                    text: `It was just another day in the Netherlands, April 27th – King's Day. The streets were alive with orange, music, and celebration. ${CUSTOMIZATION.playerName} was enjoying the festivities when a notification lit up the phone screen.
+                    id: "intro",
+                    text: `💕 Our Story 💕
 
-${CUSTOMIZATION.meetingPlace}. A dating app ${CUSTOMIZATION.playerName} had almost forgotten about. But this notification... this one felt different somehow.
+Hey ${CUSTOMIZATION.partnerName},
 
-Someone had matched. ${CUSTOMIZATION.playerName} opened the app and saw her profile – ${CUSTOMIZATION.partnerName}. And then, a message...
+I made something special for you. This is our story - from that first "Filo?" message to right now.
 
-"Filo?"`,
+Every choice you make will unlock memories of our journey together.
+
+Ready to relive our story?
+
+- CJ`,
                     choices: [
                         {
-                            label: "Reply: 'Yes! Are you Filipino too?'",
-                            resultText: `${CUSTOMIZATION.playerName} smiled and quickly typed back: "Yes! Are you Filipino too?" There was something exciting about this simple question – a connection that felt instant, even through a screen.`,
-                            nextSceneId: "scene2",
-                            memoryUnlocked: {
-                                title: "First Message: 'Filo?'",
-                                description: "That simple word that started everything. Who knew three letters could change a life?"
-                            }
-                        },
+                            label: "Let's begin 💕",
+                            resultText: "Here's where it all started...",
+                            nextSceneId: "scene1"
+                        }
+                    ]
+                },
+                {
+                    id: "scene1",
+                    text: `April 26th. King's Day in the Netherlands.
+
+I was surrounded by orange everywhere people celebrating, music blasting, the whole city going crazy. Then my phone buzzed.
+
+${CUSTOMIZATION.meetingPlace}.
+
+We matched. I opened it and saw your profile. And then... I saw your message.
+
+"Filo?" you asked.
+
+Simple. Direct. I smiled at my screen.`,
+                    choices: [
                         {
-                            label: "Reply: 'Yeah! What gave it away? 😄'",
-                            resultText: `${CUSTOMIZATION.playerName} grinned and sent: "Yeah! What gave it away? 😄" The King's Day celebrations continued around, but suddenly all that mattered was this conversation.`,
+                            label: "ye",
+                            resultText: `I kept it simple. "ye"
+
+"how'd you know" I added.
+
+You replied: "i saw it. in your personal information"
+
+"ahhh" I typed. "i totally forgot i put it there"
+
+Then I asked: "what's ur ethnicity?"
+
+Simple. Natural. The conversation just... flowed.`,
                             nextSceneId: "scene2",
                             memoryUnlocked: {
-                                title: "First Message: 'Filo?'",
-                                description: "That simple word that started everything. Who knew three letters could change a life?"
-                            }
-                        },
-                        {
-                            label: "Reply: 'Yes! Happy King's Day btw!'",
-                            resultText: `${CUSTOMIZATION.playerName} typed back enthusiastically: "Yes! Happy King's Day btw!" Maybe sharing the moment would make the conversation more memorable. Spoiler: it definitely did.`,
-                            nextSceneId: "scene2",
-                            memoryUnlocked: {
-                                title: "King's Day Connection",
-                                description: "We started talking on King's Day in the Netherlands – a day of celebration that became even more special."
+                                title: "First Message: Filo?",
+                                description: "April 26 • King's Day • The message that started everything."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene2",
-                    text: `The reply came faster than expected. ${CUSTOMIZATION.playerName}'s phone buzzed again.
+                    text: `Then you hit me with it.
 
-"If I say 'ampogi,' what ethnicity would you think I am?" 
+"If I say 'ampogi mo,' what ethnicity would you think I am?"
 
-${CUSTOMIZATION.playerName} laughed out loud, getting a few curious looks from the orange-clad crowd. This girl had game. 'Ampogi' – a Tagalog word meaning 'so handsome.' She was smooth, funny, and definitely Filipino.`,
+I laughed out loud in the middle of King's Day. You were smooth. Confident. Bold.
+
+I was already hooked.`,
                     choices: [
                         {
-                            label: "Reply: 'Haha definitely Filipino! Smooth line btw 😊'",
-                            resultText: `${CUSTOMIZATION.playerName} typed: "Haha definitely Filipino! Smooth line btw 😊" There was something charming about her confidence. ${CUSTOMIZATION.partnerName} responded with a laughing emoji and "Thank you, I try 😌"`,
+                            label: "ur filo too??",
+                            resultText: `"ur filo too??" I typed back.
+
+"yasssss" you replied.
+
+"ahhh" I said, then added: "ang ganda mo po ate"
+
+"luh. HAHAHAHAHAHAHA" you responded.
+
+The way you laughed at everything. That energy. I was completely hooked.`,
                             nextSceneId: "scene3",
                             memoryUnlocked: {
                                 title: "The Ampogi Line",
-                                description: "When Nycie dropped the smoothest pickup line and we both knew this was going to be fun."
-                            }
-                        },
-                        {
-                            label: "Reply: 'That's the best line I've heard all day 😂'",
-                            resultText: `${CUSTOMIZATION.playerName} sent: "That's the best line I've heard all day 😂" It was true. King's Day was great, but this conversation was already the highlight. ${CUSTOMIZATION.partnerName} replied: "All day? I'm aiming for all week!"`,
-                            nextSceneId: "scene3",
-                            memoryUnlocked: {
-                                title: "The Ampogi Line",
-                                description: "When Nycie dropped the smoothest pickup line and we both knew this was going to be fun."
+                                description: "When you came in smooth and I knew I was in trouble."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene3",
-                    text: `The conversation flowed effortlessly. Messages flew back and forth – about life in the Netherlands, Filipino food they missed, funny stories, dreams, and random thoughts. Hours passed in what felt like minutes.
+                    text: `We kept talking. I asked about where you were born, your family, your studies.
 
-They talked about everything: favorite movies, embarrassing moments, what they were doing in the Netherlands, their families back home. ${CUSTOMIZATION.playerName} learned that ${CUSTOMIZATION.partnerName} had this amazing laugh and a way with words that made even mundane topics interesting.
+The conversation flowed so naturally laughing about education systems, family, life in different countries.
 
-As the King's Day celebrations wound down, the conversation was just getting started...`,
+Then I started asking about Tantan.
+
+"so ilan kachat mo dito sa tantan ate" I asked.
+
+"nawawala po silaaaa" you said. "parang bula. hindi nag lalast. HAHAHAHAHAHAH. isang araw pinakamatagal"
+
+I couldn't help but laugh. "hahahahahahahaha ginoghost ka 🤣"
+
+"yah HAHAHAHAHAHHA" you replied. "iba kasi hanap"
+
+That's when I asked: "ano ba hanap mo"`,
                     choices: [
                         {
-                            label: "Suggest video calling sometime",
-                            resultText: `${CUSTOMIZATION.playerName} took a chance: "This is fun, but I bet you're even funnier in person... or video call? 😊" ${CUSTOMIZATION.partnerName} replied almost immediately: "Smooth! I like it. Let's do it."`,
+                            label: "Wait for her answer",
+                            resultText: `"gagi i mean iba gusto nila" you said. "lam mo naman mga tao dito"
+
+You were being careful. Testing the waters.
+
+Then you slipped: "gusto ko ng bini. bini baby. ay haaa?????? maliii HAHAHAHAHAHAHAHA"
+
+I saw my chance. "cge i baby kita ate"
+
+I quickly added "typo. hahahaha"
+
+But we both knew it wasn't really a typo.
+
+"pano mo ko ma baby e. ate ka ng ate. hayst" you teased.
+
+So I doubled down: "baby nalang kase"
+
+"ay sir, typo po ata kayo HAHAHAHAHAHAHAHA" you replied.
+
+"hahahahahaha typo nga" I played along.
+
+"sana hindi 🤞" you sent.
+
+"shitt jahahahahaha" I typed.
+
+"gaho. gago HAHAHAHAHAHAHA" you laughed.
+
+The flirting was unhinged. The energy was perfect. And I was absolutely here for it.`,
                             nextSceneId: "scene4",
                             memoryUnlocked: {
-                                title: "Taking It Further",
-                                description: "When we decided that messages weren't enough – we needed to see each other."
-                            }
-                        },
-                        {
-                            label: "Ask if she wants to meet up",
-                            resultText: `${CUSTOMIZATION.playerName} felt bold: "So... when can I actually meet you? Coffee? Dinner? Walk?" ${CUSTOMIZATION.partnerName} sent a smiling emoji: "Someone's confident! I like that. Let's meet up."`,
-                            nextSceneId: "scene4",
-                            memoryUnlocked: {
-                                title: "Taking It Further",
-                                description: "When we decided that messages weren't enough – we needed to see each other."
+                                title: "Baby Era Begins",
+                                description: "The 'typo' that changed everything €“ when baby became our thing."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene4",
-                    text: `Days turned into weeks, weeks into months. What started as messages on ${CUSTOMIZATION.meetingPlace} evolved into video calls, late-night conversations, meeting up for coffee, dinners, walks through Dutch streets, and creating countless inside jokes.
+                    text: `The conversation kept flowing.
 
-One evening after a fun night out, ${CUSTOMIZATION.partnerName} had a few drinks and got that adorable tipsy glow. She looked at ${CUSTOMIZATION.playerName} with slightly unfocused but happy eyes and said something that would become *their* thing...
+"te gustooo ko matulog ng maaga ngayon" you said. "pero parang d ako makatulog. ng dahil sayo HAHAHAHAHAHAHA"
 
-"${CUSTOMIZATION.insideJoke}..." (the world is spinning)`,
+"may work me tomorrow 🥲"
+
+"anong oras work mo bukas baby" I asked.
+
+"8am-8pm" you replied.
+
+"8am??? wtf" I said.
+
+"ya. carer 🙂"
+
+Then you asked: "nag wo work kadin po ba dyan beb?"
+
+"yess. kakatapos kolang baby" I replied.
+
+"ano work mo?"
+
+"restaurant" I told you. We talked about our schedules, our lives. It was getting late.
+
+Then I said something I didn't plan.`,
                     choices: [
                         {
-                            label: "Laugh and hold her steady",
-                            resultText: `${CUSTOMIZATION.playerName} laughed and gently held her steady. "Easy there! How many did you have?" ${CUSTOMIZATION.partnerName} giggled. "Not that many! The world just likes spinning when I'm with you." From that moment, "${CUSTOMIZATION.insideJoke}" became their special phrase – a reminder of that perfect, silly, loving moment.`,
+                            label: "tulog kana baby",
+                            resultText: `"tulog kana baby. maaga kapa bukas" I typed.
+
+We kept talking.
+
+We kept talking \u2013 about work, about life, about everything.
+
+Then you said: "i have to sleep now. see ya later. goodnight beb"
+
+"goodnight babyy. talk to you tomorrow" I replied.
+
+Then I added: "baka ighost moko"
+
+"luh HAHAHAHAHAHA" you responded.
+
+"hahahaha. may ig ka beb?" I asked.
+
+"yassss. wow ig talaga haaaa HAHAHAHAHAHA. jabonillo_nycie"
+
+"ano ba. number mo? hahahahaha" I pushed.
+
+"HAHAHAHAHAHA e follow mo na. bago magbago isip ko"
+
+"nafollow kuna po" I confirmed.
+
+That night, something changed. We weren't just chatting anymore.
+
+We were building something real.`,
                             nextSceneId: "scene5",
                             memoryUnlocked: {
-                                title: "Umiikot Ung Mundo Ko",
-                                description: "Our inside joke that nobody else gets – born from a tipsy night and endless laughter."
+                                title: "IG Exchange",
+                                description: "When we moved from Tantan to Instagram \u2013 jabonillo_nycie. The moment it got real."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene5",
-                    text: `Everything felt perfect. They had found something real – something worth holding onto. But life isn't always simple, and sometimes even the best relationships face storms.
+                    text: `Few weeks later.
 
-There was a time when things got complicated. Misunderstandings, doubts, different paths pulling them in different directions. They went their separate ways for a while.
+I was scrolling Instagram when I got the notification.
 
-Those months apart were hard. ${CUSTOMIZATION.playerName} missed ${CUSTOMIZATION.partnerName}'s laugh, her texts, her presence. And ${CUSTOMIZATION.partnerName} missed ${CUSTOMIZATION.playerName} too – more than she wanted to admit.`,
+You were live.
+
+I clicked in immediately. There you were on camera, talking, laughing, being you.
+
+Then you said it:
+
+"umiikot ung mundo ko."
+
+I burst out laughing. That line. That delivery.
+
+It stuck with me. Forever.
+
+`,
                     choices: [
                         {
-                            label: "Reach out to her",
-                            resultText: `${CUSTOMIZATION.playerName} finally worked up the courage and sent a simple message: "I miss you." Three words. Three incredibly important words. ${CUSTOMIZATION.partnerName} replied almost immediately: "I miss you too. Can we talk?"`,
+                            label: "Wait for the morning",
+                            resultText: `The next day, I woke up to your message.
+
+"hanggang saan ka naka view sa live? hanggang matapos?"
+
+I knew I watched until the end. But during the live, I heard you and your friend talking about a date you had with someone.
+
+My chest tightened. But I played it cool.
+
+"uhmm, i think so" I replied.
+
+Despite that moment of doubt, "umiikot ung mundo ko" became our inside joke.`,
                             nextSceneId: "scene6",
                             memoryUnlocked: {
-                                title: "Finding Our Way Back",
-                                description: "We lost our way for a bit, but found each other again – stronger and more sure than ever."
+                                title: "IG Live: Umiikot Ung Mundo Ko",
+                                description: "The inside joke that nobody else understands €“ and we wouldn't have it any other way."
                             }
                         },
                         {
-                            label: "Wait and hope she reaches out",
-                            resultText: `${CUSTOMIZATION.playerName} waited, hoping. And then, one evening, the phone buzzed. ${CUSTOMIZATION.partnerName}: "Hey... can we talk? I've been thinking about us." ${CUSTOMIZATION.playerName}'s heart leaped. "I'd like that. I've been thinking about you too."`,
+                            label: "Call him",
+                            resultText: `Incoming call. From you.
+
+But my phone was charging in the other room. By the time I got to it... missed call.`,
                             nextSceneId: "scene6",
                             memoryUnlocked: {
-                                title: "Finding Our Way Back",
-                                description: "We lost our way for a bit, but found each other again – stronger and more sure than ever."
+                                title: "IG Live: Umiikot Ung Mundo Ko",
+                                description: "The inside joke that nobody else understands €“ and we wouldn't have it any other way."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene6",
-                    text: `They talked for hours – really talked. About what went wrong, what they learned, what they wanted. And they realized something important: they were better together. The time apart taught them what they had was rare and worth fighting for.
+                    text: `Months went by. The texts never stopped. The calls got longer. The feelings got real.
 
-They decided to try again – this time with more honesty, more patience, more understanding. And it was even better the second time around. They knew what they could lose, so they held on tighter.
+One night, I stared at my phone. Then I opened a flight search.
 
-One evening, ${CUSTOMIZATION.partnerName} took ${CUSTOMIZATION.playerName}'s hand. "You know what? I'm glad we went through everything we did. It brought us here – to this version of us. And I love this version."`,
+Netherlands to UK.
+
+I did something crazy.
+
+I texted you: "I'm booking a flight to see you."
+
+Three dots appeared. Then:
+
+"Wait, seriously?"
+
+"Ya, ayaw mo?"`,
                     choices: [
                         {
-                            label: "Tell her you feel the same",
-                            resultText: `${CUSTOMIZATION.playerName} squeezed her hand. "Me too. Every challenge made us stronger. And I wouldn't change a thing because it led us here." They smiled at each other, and it felt like coming home.`,
+                            label: "React to his message",
+                            resultText: `You sent a string of excited emojis. "I can't believe this is really happening."
+
+"Me neither. But it is," I replied.
+
+I clicked confirm.
+
+Flight booked. Netherlands to London. Arrival: Heathrow.
+
+Date: 28 October 2024.
+
+This was real now. No more screens. No more distance.
+
+Just us.`,
                             nextSceneId: "scene7",
                             memoryUnlocked: {
-                                title: "Stronger Together",
-                                description: "We learned that love isn't perfect, but it's worth it – especially with the right person."
-                            }
-                        },
-                        {
-                            label: "Kiss her gently",
-                            resultText: `${CUSTOMIZATION.playerName} leaned in and kissed her gently – a kiss that said everything words couldn't. When they pulled apart, ${CUSTOMIZATION.partnerName} smiled. "I love you." "I love you too."`,
-                            nextSceneId: "scene7",
-                            memoryUnlocked: {
-                                title: "Stronger Together",
-                                description: "We learned that love isn't perfect, but it's worth it – especially with the right person."
+                                title: "The Flight",
+                                description: "When I stopped overthinking and just booked it €“ Netherlands to Heathrow."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene7",
-                    text: `As the sun started to set, painting the sky in shades of pink and gold, they found a bench overlooking a small pond. ${CUSTOMIZATION.partnerName} leaned their head on ${CUSTOMIZATION.playerName}'s shoulder.
+                    text: `28 October 2024.
 
-"This has been perfect," ${CUSTOMIZATION.partnerName} whispered.
+Heathrow Airport.
 
-"It really has," ${CUSTOMIZATION.playerName} agreed, heart so full it could burst.
+I walked through arrivals, heart pounding. Scanning the crowd.
 
-Then ${CUSTOMIZATION.partnerName} brought up ${CUSTOMIZATION.insideJoke}, and they both burst into laughter, earning curious looks from passersby. It became their thing – a joke only they understood.`,
+And then, I saw you.
+
+Really saw you.
+
+Not a screen. Not a voice note. Not a pixelated live video.
+
+You.
+
+Our eyes met.
+
+"Hi," you said, smiling nervous.
+
+"Hi," I said back.
+
+And just like that, everything made sense.`,
                     choices: [
                         {
-                            label: "Tell them how you feel",
-                            resultText: `${CUSTOMIZATION.playerName} took a deep breath. "I know we just met, but I really like spending time with you. I can't remember the last time I felt this... happy." ${CUSTOMIZATION.partnerName} looked up, eyes shining. "Me too. Let's keep doing this – making memories together."`,
-                            nextSceneId: "scene_final",
-                            memoryUnlocked: {
-                                title: "A Perfect Day",
-                                description: "The day we knew this was something special – something worth holding onto."
-                            }
-                        }
-                    ]
-                },
-                {
-                    id: "scene_final",
-                    text: `They built a life together, moment by moment. They discovered their shared love for Bruno Mars, especially "${CUSTOMIZATION.favoriteSong}" – a song that seemed written just for them. Every time it played, they'd look at each other and smile.
+                            label: "Let him hug you",
+                            resultText: `I stepped forward and pulled you into a hug.
 
-They created countless memories: cooking Filipino food together, late-night talks, dancing in the living room, dealing with life's ups and downs, always together.
+You laughed, a little breathless.
 
-One evening, ${CUSTOMIZATION.partnerName} took ${CUSTOMIZATION.playerName} somewhere special – a quiet rooftop with a view of the city lights, decorated with fairy lights that twinkled like stars. The perfect romantic setting.`,
-                    imageURL: CUSTOMIZATION.photoURL,
-                    choices: [
-                        {
-                            label: "Put on 'Too Good to Say Goodbye'",
-                            resultText: `${CUSTOMIZATION.playerName} pulled out a phone and played their song – "${CUSTOMIZATION.favoriteSong}" by Bruno Mars. As the familiar melody filled the air, ${CUSTOMIZATION.partnerName} smiled. "Our song." They swayed together under the fairy lights, wrapped in the moment and in each other.`,
+First meeting. Heathrow. October 28th. A moment I'll never forget.`,
                             nextSceneId: "scene8",
                             memoryUnlocked: {
-                                title: "Our Song",
-                                description: "'Too Good to Say Goodbye' by Bruno Mars – the song that's ours, forever and always."
+                                title: "28 October 2024 €¢ Heathrow",
+                                description: "The first time I saw you in real life €“ nervous, excited, unforgettable."
                             }
                         },
                         {
-                            label: "Tell her this moment is perfect",
-                            resultText: `"This is perfect," ${CUSTOMIZATION.playerName} whispered, looking at the fairy lights, the city view, and most importantly – at ${CUSTOMIZATION.partnerName}. "You make everything perfect," she replied, leaning against him. The world could have been spinning, but in that moment, everything was exactly where it should be.`,
+                            label: "Just smile at him",
+                            resultText: `I just stood there for a second, taking you in.
+
+First meeting. Heathrow. October 28th.
+
+Everything felt right.`,
                             nextSceneId: "scene8",
                             memoryUnlocked: {
-                                title: "Rooftop Magic",
-                                description: "Under fairy lights with the city below us, everything felt like a dream come true."
+                                title: "28 October 2024 €¢ Heathrow",
+                                description: "The first time I saw you in real life €“ nervous, excited, unforgettable."
                             }
                         }
                     ]
                 },
                 {
                     id: "scene8",
-                    text: `One evening, ${CUSTOMIZATION.partnerName} took ${CUSTOMIZATION.playerName} to their favorite spot in the city – a quiet rooftop garden that few people knew about. Under the stars, surrounded by flowers and fairy lights...`,
+                    text: `More than a year later.
+
+Things got complicated. Life pulled them in different directions. They had a rough patch.
+
+They broke up.
+
+For a while, it felt like that was it. Over.
+
+But some things are too good to let go.`,
+                    choices: [
+                        {
+                            label: "Reach out",
+                            resultText: `${CUSTOMIZATION.playerName} sent a text about how he want to make things work again.
+They talked. Really talked. About everything.
+
+And they found their way back.`,
+                            nextSceneId: "scene10",
+                            memoryUnlocked: {
+                                title: "Finding Our Way Back",
+                                description: "We lost each other for a bit €“ but we found our way home."
+                            }
+                        }
+                    ]
+                },
+                {
+                    id: "scene10",
+                    text: `From that first "Filo?" on ${CUSTOMIZATION.meetingPlace} to Heathrow on 28 October 2024. From "umiikot ung mundo ko" to "Too Good to Say Goodbye."
+
+${CUSTOMIZATION.playerName} and ${CUSTOMIZATION.partnerName} had built something real.
+
+They'd laughed until they cried. They'd fought and made up. They created inside jokes nobody else understood. They survived time zones, distance, and a breakup.
+
+And through it all, they chose each other.
+
+${CUSTOMIZATION.playerName} looked at ${CUSTOMIZATION.partnerName}, really looked at her and knew.
+
+It was time.`,
                     imageURL: CUSTOMIZATION.photoURL,
                     choices: [
                         {
-                            label: "This moment is perfect",
-                            resultText: `${CUSTOMIZATION.playerName} smiled at ${CUSTOMIZATION.partnerName} in the fairy lights. "This moment – you and me, right here. It's perfect." ${CUSTOMIZATION.partnerName} squeezed their hand. "With you, every moment is perfect."`,
-                            nextSceneId: "scene_proposal",
-                            memoryUnlocked: {
-                                title: "Perfect Moment",
-                                description: "A moment where everything felt absolutely right – just the two of us."
-                            }
-                        }
-                    ]
-                },
-                {
-                    id: "scene_proposal",
-                    text: `From that first "Filo?" message on ${CUSTOMIZATION.meetingPlace} to this moment, ${CUSTOMIZATION.playerName} and ${CUSTOMIZATION.partnerName} have built something incredible together.
-
-They've laughed until they cried, weathered storms and came out stronger, created inside jokes nobody else understands, and found in each other a partner, best friend, and home.
-
-Every challenge made them appreciate the good times more. Every moment apart made them treasure being together. And through it all, they learned that real love isn't perfect – it's choosing each other, again and again.
-
-${CUSTOMIZATION.playerName} looked at ${CUSTOMIZATION.partnerName} in the fairy lights, heart full of love and certainty. It was time to ask an important question...`,
-                    choices: [
-                        {
                             label: "So... will you be my Valentine? 💕",
-                            resultText: `"${CUSTOMIZATION.partnerName}, from that first message to this moment, every day with you has been a gift. We've been through so much together – the fun times, the hard times, and everything in between. And I wouldn't change a thing because it all led us here.
+                            resultText: `"${CUSTOMIZATION.partnerName}...
 
-You're my favorite person, my inside joke keeper, my 'ampogi' flirt, the one who makes my world spin (${CUSTOMIZATION.insideJoke}, right? 😊). You're the person I want to keep making memories with, the one I want to share every Bruno Mars song with, the one I choose every single day.
+From that King's Day message to right now, every moment with you has been worth it. The chaos, the flirting, the flights, the rough patches, all of it.
 
-So, ${CUSTOMIZATION.partnerName}... will you be my Valentine? 💕
+You're my bebe, my 'ampogi' girl, the one who makes umiikot ung mundo ko. You're the person I want to keep choosing, every single day.
 
-— CJ"`,
+We're too good to say goodbye.
+
+So... will you be my Valentine? 💕
+ CJ"`,
                             nextSceneId: "end",
                             memoryUnlocked: {
                                 title: "Our Beginning",
-                                description: "Not the end of our story – just the end of Chapter 1. Forever more chapters to write together."
+                                description: "Not the end €“ just the start of forever."
                             }
                         }
-                    ]
-                },
-                {
-                    id: "scene8",
-                    text: `From that first "Filo?" message on ${CUSTOMIZATION.meetingPlace} to this moment, ${CUSTOMIZATION.playerName} and ${CUSTOMIZATION.partnerName} have built something incredible together.
-
-They've laughed until they cried, weathered storms and came out stronger, created inside jokes nobody else understands, and found in each other a partner, best friend, and home.
-
-Every challenge made them appreciate the good times more. Every moment apart made them treasure being together. And through it all, they learned that real love isn't perfect – it's choosing each other, again and again.
-
-${CUSTOMIZATION.playerName} looked at ${CUSTOMIZATION.partnerName} in the fairy lights, heart full of love and certainty. It was time to ask an important question...`,
-                    choices: [
-                        {
-                            label: "So... will you be my Valentine? 💕",
-                            resultText: `"${CUSTOMIZATION.partnerName}, from that first message to this moment, every day with you has been a gift. We've been through so much together – the fun times, the hard times, and everything in between. And I wouldn't change a thing because it all led us here.
-
-You're my favorite person, my inside joke keeper, my 'ampogi' flirt, the one who makes my world spin (${CUSTOMIZATION.insideJoke}, right? 😊). You're the person I want to keep making memories with, the one I want to share every Bruno Mars song with, the one I choose every single day.
-
-So, ${CUSTOMIZATION.partnerName}... will you be my Valentine? 💕
-
-— CJ"`,
-                            nextSceneId: "end",
-                            memoryUnlocked: {
-                                title: "Our Beginning",
-                                description: "Not the end of our story – just the end of Chapter 1. Forever more chapters to write together."
-                            }
-                        }
-                    ]
-                },
+                    ]                },
                 {
                     id: "end",
                     text: `💕 Thank you for playing our story! 💕
@@ -318,8 +436,7 @@ So, ${CUSTOMIZATION.partnerName}... will you be my Valentine? 💕
 This is just the beginning. I can't wait to create more memories with you and write countless more chapters together.
 
 (You can restart to make different choices and unlock all the memories!)`,
-                    choices: []
-                }
+                    choices: []                }
             ]
         }
     ]
@@ -331,7 +448,7 @@ This is just the beginning. I can't wait to create more memories with you and wr
 
 let gameState = {
     chapterId: "chapter1",
-    sceneId: "scene1",
+    sceneId: "intro",
     history: [], // Array of {chapterId, sceneId, choiceIndex}
     memories: [] // Array of {title, description}
 };
@@ -369,7 +486,7 @@ function saveGameState() {
 function resetGameState() {
     gameState = {
         chapterId: "chapter1",
-        sceneId: "scene1",
+        sceneId: "intro",
         history: [],
         memories: []
     };
@@ -508,7 +625,7 @@ function handleChoice(choiceIndex) {
         // Show a continue button
         const continueBtn = document.createElement("button");
         continueBtn.className = "choice-btn";
-        continueBtn.textContent = "Continue →";
+        continueBtn.textContent = "Continue †’";
         continueBtn.onclick = () => continueToNextScene(choice);
         document.getElementById("choicesSection").appendChild(continueBtn);
     } else {
@@ -575,3 +692,5 @@ function setupEventListeners() {
 // ==================== 
 
 document.addEventListener("DOMContentLoaded", initGame);
+
+
