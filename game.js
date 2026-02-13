@@ -427,6 +427,25 @@ So... will you be my Valentine? 💕
                                 title: "Our Beginning",
                                 description: "Not the end €“ just the start of forever."
                             }
+                        },
+                        {
+                            label: "So... will you be my Valentine? 💕",
+                            resultText: `
+
+I know things feel a bit rough right now, but I still want to ask you something from a genuine place.
+I hope you’ll still be my Valentine.
+
+I also want to be honest, I’m still trying to understand the blocking situation. I don’t fully get why it was okay for others to see what you posted, but not me, and that did make me overthink.
+
+I won’t lie and say I didn’t overthink, but I’m better at controlling it than before. I know I can’t control what you do only how I react and I’m really trying to handle things more calmly and honestly.
+
+I care about you, and I just wanted to be real about where I’m at.
+ `,
+                            nextSceneId: "end",
+                            memoryUnlocked: {
+                                title: "Say It Again",
+                                description: "Because some questions deserve to be asked twice."
+                            }
                         }
                     ]                },
                 {
